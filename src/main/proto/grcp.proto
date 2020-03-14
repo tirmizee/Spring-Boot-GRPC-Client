@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package com.tirmizee.grpc;
+
+option java_multiple_files = true;
+option java_outer_classname = "GrpcProto";
+
+message Person {
+	int32 id = 1;
+  	string firstName = 2;
+  	string lastName = 3;
+  	string email = 4;
+}
+
+message Message {
+	string code = 1;
+  	string message = 2;
+}
+
+service HelloWorldService {
+  rpc sayHello (Person) returns (Message);
+}

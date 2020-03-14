@@ -15,7 +15,7 @@ public class GrpcClientController {
 	
 	@GetMapping(path = "/grpc/message/{message}")
 	public String sendMessage(@PathVariable String message) {
-		return helloWorldClient.sayHello("pratya", message);
+		return null;
 	}
 
 }
